@@ -14,8 +14,6 @@ namespace DAB_Assignment_OnlineHelpRequest
         {
             Console.WriteLine("Hello DAB Assignment");
 
-            //Kan vi flytte dummy data til en ny fil/mappe?
-
             //Dummy data for Students
             IList<Student> newStudents = new List<Student>()
             {
@@ -206,7 +204,7 @@ namespace DAB_Assignment_OnlineHelpRequest
                             }
                             break;
 
-                        case "u": //Statistics
+                        case "u": //Statistics of requests for a course
                             Console.WriteLine("Enter courseID: ");
                             string CourseStats = Console.ReadLine();
 
@@ -230,43 +228,43 @@ namespace DAB_Assignment_OnlineHelpRequest
                             Console.WriteLine("Total amount request: " + Total);
                             break;
 
-                        case "m":
+                        case "m": //Create student
                             Student newstudent = InputStudent();
                             context.Students.Add(newstudent);
                             context.SaveChanges();
                             break;
 
-                        case "n":
+                        case "n": //Create Course
                             Course newCourse = InputCourse();
                             context.Courses.Add(newCourse);
                             context.SaveChanges();
                             break;
 
-                        case "v":
+                        case "v": //Create Teacher
                             Teacher newTeacher = InputTeacher(context);
                             context.Teachers.Add(newTeacher);
                             context.SaveChanges();
                             break;
 
-                        case "c":
+                        case "c": //Create Assignment
                             Assignment newAssignment = InputAssignment(context);
                             context.Assignments.Add(newAssignment);
                             context.SaveChanges();
                             break;
 
-                        case "q":
+                        case "q": //Create Exercise
                             Exercise newExercise = InputExercise(context);
                             context.Exercises.Add(newExercise);
                             context.SaveChanges();
                             break;
 
-                        case "y":
+                        case "y": //Create RequestHelpAssignments
                             RequestHelpAssignments newreRequestHelpAssignments = InputRequestHelpAssignments(context);
                             context.RequestHelpAssignments.Add(newreRequestHelpAssignments);
                             context.SaveChanges();
                             break;
 
-                        case "h":
+                        case "h": //Console inputs
                             Console.WriteLine("");
                             Console.WriteLine("Press: a(Adds all dummy data), b(add courses)");
                             Console.WriteLine("Press: s(Delete all dummy data)");
