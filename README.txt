@@ -1,5 +1,5 @@
 1. Open the .sln file
-2. Hit f5
+2. Hit ctrl+f5
 3. Follow the on screen indications
 
 Optional: if it does not run, remember to change optionsBuilder.UseSqlServer, so it matches your own.
